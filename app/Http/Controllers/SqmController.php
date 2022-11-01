@@ -16,11 +16,11 @@ class SqmController extends Controller
         // dd($request->all());
         // dd($request->except(['_token','submit']));
         $request->validate([
-            'ncli'=> 'unique:sqm',
+            'ncli'=> 'unique:sqm' ,
             'inet'=> 'unique:sqm',
         ]);
         Sqm::create($request->except(['_token','submit']));
-        return redirect('sqm')->with('message','Berhasil Menambahkan data');
+        return redirect('/')->with('message','Berhasil Menambahkan data');
     }
     public function edit($id){
        $sqm = Sqm::find($id);
@@ -30,6 +30,6 @@ class SqmController extends Controller
     {
         $sqm = Sqm::find($id);
         $sqm->delete();
-        return redirect('sqm')->with('message','Berhasil Hapus Data');
+        return redirect('/')->with('message','Berhasil Hapus Data');
     }
 }
