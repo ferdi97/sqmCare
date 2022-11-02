@@ -127,7 +127,7 @@
                 <div class="col-md-3">
                   <div class="ms-md-auto pe-md-3 d-flex align-items-center px-4 py-4">
                     <div class="input-group input-group-outline">
-                      <label class="form-label">Type here...</label>
+                      <label class="form-label">Type no inet...</label>
                       <input type="text" class="form-control" name="cari">
                     </div>
                   </div>
@@ -166,7 +166,14 @@
                       </div>
                     </td> --}}
                     <td class="p-3">
-                      <h6 class="mb-0 text-sm">{{$dt->ncli}}</h6>
+                      <h6 class="mb-0 text-sm">{{$dt->ncli}}
+                        @php
+                            $waktu = date_diff($dt->created_at, now())-> h;
+                          if (($waktu * 60) <= 5 ){
+                                "<span class='badge bg-gradient-info'>new</span>";
+                          }
+                        @endphp
+                      </h6>
                     </td>
                     <td>
                       <h6 class="mb-0 text-sm">{{$dt->inet}}</h6>
