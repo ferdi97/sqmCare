@@ -169,8 +169,8 @@
                       <h6 class="mb-0 text-sm">{{$dt->ncli}}
                         @php
                             $waktu = date_diff($dt->created_at, now())-> h;
-                          if (($waktu * 60) <= 5 ){
-                                "<span class='badge bg-gradient-info'>new</span>";
+                          if (($waktu * 60) <= 1 ){
+                               echo "<span class='badge bg-gradient-info'>new</span>";
                           }
                         @endphp
                       </h6>
@@ -224,7 +224,7 @@
               <div class="row">
                 <div class="col-12">
                   <div class=" p-0 py-2 px-4 mb-2 mt-n4">
-                        {{$sqm->links()}} 
+                        {{$sqm->links('sqm.my-paginate')}} 
                   </div>
                 </div>
               </div>
