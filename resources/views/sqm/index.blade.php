@@ -211,16 +211,47 @@
                             </button>
                           </form> --}}
                           <a href="{{route('sqm.hapus',[$dt->id])}}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                            <button class="btn btn-icon btn-3 btn-primary" data-toggle="tooltip" data-original-title="Edit user" type="button">
-                              <span class="btn-inner--icon"><i class="material-icons">delete_sweep</i></span>
-                              <span class="btn-inner--text">Hapus</span>
-                            </button>
-                          </a>
+                          <button class="btn btn-icon btn-3 btn-primary" onclick="handleDelete()" >
+                            <span class="btn-inner--icon"><i class="material-icons">delete_sweep</i></span>
+                            <span class="btn-inner--text">Delete</span>
+                          </button>
+                          </a>                   
                     </td>
                   </tr>
                 </tbody>
                 @endforeach  
               </table>
+
+               {{-- modal  --}}
+                    <div class="modal fade" id="bukaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title font-weight-normal" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <h6>Anda yakin ingin menghapus {{$dt->id}}</h6>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="{{route('sqm.hapus',[$dt->id])}}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user" >
+                            <button type="button" class="btn bg-gradient-primary">Hapus</button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              {{-- end modal  --}}
+
+              {{-- <script>
+                function ngedelete(id){
+                  $('#bukaModal').modal('show')
+                }
+              </script> --}}
+
               <div class="row">
                 <div class="col-12">
                   <div class=" p-0 py-2 px-4 mb-2 mt-n4">
@@ -254,26 +285,11 @@
   </div>
 </main>
 @endsection
-@section('script')
-    {{-- <script>
-      $(document).ready(function(){
-      $(selector).on(events, function(){
-          $(document).on('click','editbtn' function(){
-            var id = $(this).val();
-            alert(id);
-            $('#modal-form').modal('show');
 
-            $.ajax({
-              type:"GET",
-              url :"/sqm-edit"+id,
-              success: function(response){
-                $('#ncli').val(response.sqm.ncli);
-                $('#inet').val(response.sqm.inet);             
-              }
-
-            });
-          });
-      });
-    });
-    </script> --}}
+@section('scripts')
+    <script>
+      function handleDelete(id){
+        $('#bukaModal').modal('show')
+      }
+    </script>
 @endsection

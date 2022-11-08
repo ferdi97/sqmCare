@@ -9,7 +9,7 @@ class SqmController extends Controller
 {
     public function index(Request $request){
         $cari = $request->cari;
-        $sqm = Sqm::where('inet','LIKE','%'.$cari.'%')->orderBy('id','DESC')->Paginate(20);
+        $sqm = Sqm::where('inet','LIKE','%'.$cari.'%')->orderBy('id','DESC')->Paginate(4);
         return view('sqm.index',compact(['sqm']));
     }
     public function store(Request $request){
