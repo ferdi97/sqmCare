@@ -19,18 +19,18 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('sqm.layout.master');
 // });
-
-Route::get('/',[SqmController::class,'index'])->name('sqm');
+ 
+Route::get('sqm',[SqmController::class,'index'])->name('sqm');
 Route::post('sqm/store',[SqmController::class,'store'])->name('sqm.store');
 Route::get('sqm/{id}/edit',[SqmController::class,'edit'])->name('sqm.edit');
 Route::get('sqm/{id}/hapus',[SqmController::class,'destroy'])->name('sqm.hapus');
 Route::get('teknisi',[SqmController::class,'index'])->name('teknisi');
 
-Route::get('keterusan', function () {
-    return view('bootsrap4Sqm.layoutApp.master');
-});
+// Route::get('keterusan', function () {
+//     return view('bootsrap4Sqm.layoutApp.master');
+// });
 
-Route::get('keterusan',[SqmbootController::class,'index'])->name('keterusan');
+Route::get('/',[SqmbootController::class,'index'])->name('keterusan');
 Route::post('keterusan/store',[SqmbootController::class,'store'])->name('keterusan.store');
 Route::get('keterusan/{id}/edit',[SqmbootController::class,'edit'])->name('keterusan.edit');
 Route::get('keterusan/{id}/hapus',[SqmbootController::class,'destroy'])->name('keterusan.hapus');
