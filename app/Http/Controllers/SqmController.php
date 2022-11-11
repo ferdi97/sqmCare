@@ -20,7 +20,7 @@ class SqmController extends Controller
             'inet'=> 'unique:sqm',
         ]);
         Sqm::create($request->except(['_token','submit']));
-        return redirect('/')->with('message','Berhasil Menambahkan data');
+        return redirect('sqm')->with('message','Berhasil Menambahkan data');
     }
     public function edit($id){
        $sqm = Sqm::find($id);
@@ -30,6 +30,6 @@ class SqmController extends Controller
     {
         $sqm = Sqm::find($id);
         $sqm->delete();
-        return redirect('/')->with('message','Berhasil Hapus Data');
+        return redirect('sqm')->with('message','Berhasil Hapus Data');
     }
 }

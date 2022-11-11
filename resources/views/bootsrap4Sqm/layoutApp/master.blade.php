@@ -19,7 +19,7 @@ The above copyright notice and this permission notice shall be included in all c
   <link rel="icon" type="image/png" href="{{asset('template_homepage/assets/img/samarinda.png')}}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Material Dashboard by Creative Tim
+    Keterusan Hah
   </title>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>

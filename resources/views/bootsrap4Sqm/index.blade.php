@@ -34,7 +34,7 @@
           @enderror
         @if (session('message'))
         <div class="col-md-12">
-            <div class="alert alert-info">
+            <div class="alert alert-success">
                 <span>{{session('message')}}</span>
               </div>
         </div>
@@ -66,7 +66,7 @@
                                             </div>
                                             </div>
                                             </div>
-                                            <button type="submit" class="btn btn-primary pull-right">Simpan</button>
+                                            <button type="submit" class="btn btn-danger pull-right">Simpan</button>
                                             <div class="clearfix"></div>
                             </form>
          
@@ -114,19 +114,25 @@
                             @forelse ($sqm as $key =>$value)
                               <tr>
                                   <td>{{$loop->iteration}}</td>
-                                  <td>{{$value->ncli}}</td>
+                                  <td>{{$value->ncli}}
+                                    {{-- @php
+                                    $waktu = date_diff($value->created_at, now())-> h;
+                                  if (($waktu * 60) <= 24 ){
+                                       echo "<span class='badge bg-gradient-info'>new</span>";
+                                  }
+                                @endphp --}}
+                                  </td>
                                   <td>{{$value->inet}}</td>
                                   <td class="td-actions text-left">
                                     <a href="https://ibooster.telkom.co.id/res/get_ukur_indikasi.php?serviceno%3D{{$value->inet}}%26assetnum%3D{{$value->ncli}}_{{$value->inet}}_INTERNET" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user" target="_blank">
                                         <button class="btn btn-icon btn-3 btn-success"  type="button">
                                           <span class="btn-inner--icon"><i class="material-icons">draw</i></span>
-                                          <span class="btn-inner--text">Create</span>
+                                          <span class="btn-inner--text">create</span>
                                         </button>
                                         </a>
                                         <a href="{{route('keterusan.hapus',[$value->id])}}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                                            <button class="btn btn-icon btn-3 btn-primary" onclick="handleDelete()" >
-                                              <span class="btn-inner--icon"><i class="material-icons">delete_sweep</i></span>
-                                              <span class="btn-inner--text">Delete</span>
+                                            <button class="btn btn-warning"  >
+                                              <i class="material-icons">delete_sweep</i> Delete
                                             </button>
                                             </a>  
                                   </td>
