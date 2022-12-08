@@ -11,8 +11,14 @@
       <ul class="nav">
         <li class="nav-item {{request()->is('/') ? ' active' : ''}} nav-primary">
           <a class="nav-link" href="{{route('keterusan')}}">
-            <i class="material-icons">person</i>
+            <i class="material-icons">fact_check</i>
             <p>SQM DATA</p>
+          </a>
+        </li>
+        <li class="nav-item nav-primary">
+          <a class="nav-link" href="#">
+            <i class="material-icons">mediation</i>
+            <p>HD Tiket Monitor</p>
           </a>
         </li>
         {{-- @role('superAdmin') --}}

@@ -68,6 +68,12 @@
                                             </div>
                                             <button type="submit" class="btn btn-danger pull-right">Simpan</button>
                                             <div class="clearfix"></div>
+                                            <a href="http://10.128.16.78/pcf/index.php" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user" target="_blank">
+                                              <button class="btn btn-icon btn-3 btn-success"  type="button">
+                                                <span class="btn-inner--icon"><i class="material-icons">rocket_launch</i></span>
+                                                <span class="btn-inner--text">Buka PCF</span>
+                                              </button>
+                                              </a>
                             </form>
          
                            {{-- <form action="{{route('keterusan.store')}}" method="POST" >
@@ -131,7 +137,7 @@
                                         </button>
                                         </a>
                                         <a href="{{route('keterusan.hapus',[$value->id])}}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                                            <button class="btn btn-warning"  >
+                                            <button class="btn btn-info"  >
                                               <i class="material-icons">delete_sweep</i> Delete
                                             </button>
                                             </a>  
