@@ -74,6 +74,12 @@
                                                 <span class="btn-inner--text">Buka PCF</span>
                                               </button>
                                               </a>
+                                              <a href="https://carent.telkom.co.id/cons/index" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user" target="_blank">
+                                                <button class="btn btn-icon btn-3 btn-success"  type="button">
+                                                  <span class="btn-inner--icon"><i class="material-icons">rocket_launch</i></span>
+                                                  <span class="btn-inner--text">Buka Carent</span>
+                                                </button>
+                                                </a>
                             </form>
          
                            {{-- <form action="{{route('keterusan.store')}}" method="POST" >

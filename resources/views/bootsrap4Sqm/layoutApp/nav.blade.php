@@ -21,6 +21,19 @@
             <p>HD Tiket Monitor</p>
           </a>
         </li>
+        <li class="nav-item nav-primary">
+          <a class="nav-link" href="#">
+            <i class="material-icons">analytics</i>
+            <p>TTR Dashboard</p>
+          </a>
+        </li>
+        <li class="nav-item nav-primary">
+          <a class="nav-link" href="#">
+            <i class="material-icons">display_settings</i>
+            <p>SQM Dashboard</p>
+          </a>
+        </li>
+        
         {{-- @role('superAdmin') --}}
       
         {{-- <li class="nav-item {{request()->is('keterusan') ? ' active' : ''}} ">
