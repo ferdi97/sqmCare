@@ -15,6 +15,12 @@
             <p>SQM DATA</p>
           </a>
         </li>
+        <li class="nav-item {{request()->is('sqmnew') ? ' active' : ''}} nav-primary">
+          <a class="nav-link" href="{{route('sq')}}">
+            <i class="material-icons">data_thresholding</i>
+            <p>SQM DATA NEW</p>
+          </a>
+        </li>
         <li class="nav-item nav-primary">
           <a class="nav-link" href="#">
             <i class="material-icons">mediation</i>
@@ -33,7 +39,7 @@
             <p>SQM Dashboard</p>
           </a>
         </li>
-        
+      
         {{-- @role('superAdmin') --}}
       
         {{-- <li class="nav-item {{request()->is('keterusan') ? ' active' : ''}} ">

@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('teknisi_tabel', function (Blueprint $table) {
+        Schema::create('sqm_news', function (Blueprint $table) {
             $table->id();
-            $table->string('id_teknisi');
-            $table->string('nama_teknisi');
-            $table->string('sto');
-            $table->string('id_tele');
+            $table->string('inet')->nullable();
+            $table->string('ncli')->nullable();
+            $table->string('no_hp')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teknisi_tabel');
+        Schema::dropIfExists('sqm_news');
     }
 };
