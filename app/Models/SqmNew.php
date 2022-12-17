@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class SqmNew extends Model
 {
     use HasFactory;
+    protected $table = 'sqm';
     protected $fillable = [
         'inet',
-        'ncli',
-        'no_hp'
+        'ncli'
     ];
 }

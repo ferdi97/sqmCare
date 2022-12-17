@@ -41,3 +41,4 @@ Route::get('keterusan/{id}/hapus',[SqmbootController::class,'destroy'])->name('k
 // Route::get('teknisi',[SqmbootController::class,'index'])->name('teknisi');
 
 Route::get('sqmnew',[SqmNewController::class,'index'])->name('sq');
+Route::post('sqmnew/post',[SqmNewController::class,'store'])->name('sq.post');

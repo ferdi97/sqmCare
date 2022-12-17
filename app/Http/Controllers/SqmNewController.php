@@ -35,7 +35,22 @@ class SqmNewController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'inputs.*.inet' => 'required|unique:sqm',
+            'inputs.*.ncli' => 'required|unique:sqm'
+        ],
+        [
+            'inputs.*.inet.required' => 'Wajib di isi no NO INTERNET nya ni cuy',
+            'inputs.*.inet.unique' => 'data NO INTERNET  sudah ada ',
+            'inputs.*.ncli.required' => 'Wajib di isi NCLI ya ni cuy',
+            'inputs.*.ncli.unique' => 'data NCLI sudah ada ',
+        ]
+    
+    );
+        foreach ($request->inputs as $key => $value){
+            SqmNew::create($value);
+        }
+        return back()->with('success','Udh Kesimpan loh ini');
     }
 
     /**
