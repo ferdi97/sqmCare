@@ -69,13 +69,13 @@
                       <td>
                         <div class="form-group col-md-6">
                           <label for="inputCity">NCLI</label>
-                          <input type="number" name="inputs[`+i+`][inet]" class="form-control" id="inputCity">
+                          <input type="number" name="inputs[`+i+`][ncli]" class="form-control" id="inputCity">
                         </div>
                       </td>
                       <td>
                         <div class="form-group col-md-6">
                           <label for="inputCity">NO INET</label>
-                          <input type="number" name="inputs[`+i+`][ncli]" class="form-control" id="inputCity">
+                          <input type="number" name="inputs[`+i+`][inet]" class="form-control" id="inputCity">
                         </div>
                       </td>
                       <td>

@@ -36,8 +36,8 @@ class SqmNewController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'inputs.*.inet' => 'required|unique:sqm',
-            'inputs.*.ncli' => 'required|unique:sqm'
+            'inputs.*.inet' => 'sometimes|required|unique:sqm',
+            'inputs.*.ncli' => 'sometimes|required|unique:sqm'
         ],
         [
             'inputs.*.inet.required' => 'Wajib di isi no NO INTERNET nya ni cuy',
